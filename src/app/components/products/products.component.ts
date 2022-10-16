@@ -13,6 +13,7 @@ export class ProductsComponent implements OnInit {
       price: 200.0,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
+      onStock: 5,
       id: 1,
     },
     {
@@ -21,6 +22,7 @@ export class ProductsComponent implements OnInit {
       price: 200.0,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
+      onStock: 5,
       id: 2,
     },
     {
@@ -29,6 +31,7 @@ export class ProductsComponent implements OnInit {
       price: 200.0,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
+      onStock: 5,
       id: 3,
     },
     {
@@ -37,6 +40,7 @@ export class ProductsComponent implements OnInit {
       price: 200.0,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
+      onStock: 5,
       id: 4,
     },
     {
@@ -45,7 +49,7 @@ export class ProductsComponent implements OnInit {
       price: 200.0,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
-
+      onStock: 5,
       id: 5,
     },
     {
@@ -54,7 +58,7 @@ export class ProductsComponent implements OnInit {
       price: 200.0,
       description:
         'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
-
+      onStock: 5,
       id: 6,
     },
   ];

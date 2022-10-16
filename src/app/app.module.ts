@@ -12,6 +12,7 @@ import { ProductDetailsComponent } from './components/product-details/product-de
 import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
+import { CheckoutComponent } from './components/checkout/checkout.component';
 
 @NgModule({
   declarations: [
@@ -23,6 +24,7 @@ import { FooterComponent } from './components/footer/footer.component';
     BtnShoppingComponent,
     ProductDetailsComponent,
     FooterComponent,
+    CheckoutComponent,
   ],
   imports: [
     BrowserModule,
@@ -30,6 +32,7 @@ import { FooterComponent } from './components/footer/footer.component';
     RouterModule.forRoot([
       { path: '', component: ProductsComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
+      { path: 'checkout', component: CheckoutComponent },
     ]),
   ],
   providers: [],
