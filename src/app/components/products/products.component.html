@@ -1,9 +1,5 @@
-<div class="container"><div class="box"><div class="product "*ngFor="let product of products">
-<a [routerLink]="['/products', product.id]">    <img [src]="product.img" alt="bike">
-  <h3>{{product.name}}</h3>
-  <p>{{product.description}}</p>
-  <h3>{{product.price}}$</h3>
-</a>
+<div class="container"><div class="box"><div [routerLink]="['/products', product.id]" class="product" *ngFor="let product of products">
+<app-product [product]="product"></app-product>
 
 </div>
 </div>
