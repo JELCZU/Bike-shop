@@ -1,5 +1,19 @@
-<div class="container">   <img [src]="product.img" alt="bike">
-  <h3>{{product.name}}</h3>
-  <p>{{product.description}}</p>
-  <h3>{{product.price}}$</h3>
+<div class="container">
+  <div class="box">
+    <div>
+      <img [src]="product.img" alt="bike" />
+    </div>
+    <div>
+      <h3>{{ product.name }}</h3>
+      <p>{{ product.description }}</p>
+    </div>
+    <div>
+      <h3>{{ product.price }}$</h3>
+      <app-btn-shopping
+        backgroundColor="rgb(17, 158, 0)"
+        color="ghostwhite"
+        text="Add to cart"
+      ></app-btn-shopping>
+    </div>
+  </div>
 </div>

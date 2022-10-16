@@ -3,5 +3,5 @@ button{
   font-size: medium;
   border-style: none;
   border-radius: 10px;
-
+  white-space: nowrap;
 }
