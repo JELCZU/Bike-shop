@@ -3,7 +3,7 @@ export const products: any[] = [
   {
     name: 'Mountain bike',
     img: '../../../assets/img/bike1.jpg',
-    price: 200.0,
+    price: 100.0,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
     onStock: 5,
@@ -21,7 +21,7 @@ export const products: any[] = [
   {
     name: 'Mountain bike',
     img: '../../../assets/img/bike1.jpg',
-    price: 200.0,
+    price: 300.0,
     description:
       'Lorem ipsum dolor sit, amet consectetur adipisicing elit. Debitis voluptates voluptate aliquid ea est quod voluptatem. Aliquam non repudiandae laborum. Temporibus itaque beatae aliquam veniam explicabo corporis asperiores ab perspiciatis!',
     onStock: 5,
