@@ -1,0 +1,45 @@
+.box{
+  display: flex;
+  margin-top: 10px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  border-style: solid;
+  border-width: 1px 0 1px 0;
+  margin-bottom: 10px;
+  /* border-bottom: 1px; */
+}
+.product{
+
+  border-radius: 15px;
+  border-style: none;
+  border-color: gray;  
+  padding:10px;
+  background-color: white;
+  min-width: 30%;
+  flex: 1;
+}
+.product:hover{
+  border-style: solid;
+  border-width: 1px;
+  padding:9px;
+  cursor: pointer;
+}
+p{ 
+  padding:0;
+  margin:0;
+  box-sizing: inherit;
+  size: small;
+  border-width: 0;
+  color:gray;
+}
+h3{
+  color: black;
+}
+img{
+  color: black;
+  max-width: 100%;
+}
+a{
+  font-style: normal;
+  color: transparent;
+}

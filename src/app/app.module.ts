@@ -8,6 +8,10 @@ import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
 import { MenuComponent } from './components/menu/menu.component';
 import { BtnShoppingComponent } from './components/btn-shopping/btn-shopping.component';
+import { ProductDetailsComponent } from './components/product-details/product-details.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { RouterModule } from '@angular/router';
+import { FooterComponent } from './components/footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -17,8 +21,17 @@ import { BtnShoppingComponent } from './components/btn-shopping/btn-shopping.com
     ProductComponent,
     MenuComponent,
     BtnShoppingComponent,
+    ProductDetailsComponent,
+    FooterComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    ReactiveFormsModule,
+    RouterModule.forRoot([
+      { path: '', component: ProductsComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
+    ]),
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
