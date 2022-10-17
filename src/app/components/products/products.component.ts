@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-export interface product {}
+
 export const products: any[] = [
   {
     name: 'Mountain bike',

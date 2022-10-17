@@ -1,6 +1,11 @@
-<div class="container"><div class="box"><div [routerLink]="['/products', product.id]" class="product" *ngFor="let product of products">
-<app-product [product]="product"></app-product>
-
-</div>
-</div>
+<div class="container">
+  <div class="box">
+    <div
+      [routerLink]="['/products', product.id]"
+      class="product"
+      *ngFor="let product of products"
+    >
+      <app-product [product]="product"></app-product>
+    </div>
+  </div>
 </div>

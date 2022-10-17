@@ -1,1 +1,12 @@
-<p>checkout works!</p>
+<div class="container">
+  <div class="box">
+    <div
+    [routerLink]="['/products', product.id]"
+    class="product"
+    *ngFor="let product of products"
+  >
+    <h2>{{product.name}}</h2>
+    <h3>{{product.price}}</h3>
+  </div>
+  </div>
+</div>
