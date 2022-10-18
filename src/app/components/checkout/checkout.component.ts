@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { products } from '../products/products.component';
+import { products, product } from '../../services/products.service';
+import { cart } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-checkout',
   templateUrl: './checkout.component.html',
@@ -7,7 +8,7 @@ import { products } from '../products/products.component';
 })
 export class CheckoutComponent implements OnInit {
   products: any;
-
+  cart: product[] = cart;
   constructor() {}
 
   ngOnInit(): void {

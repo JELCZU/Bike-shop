@@ -1,12 +1,21 @@
 <div class="container">
-  <div class="box">
-    <div
-    [routerLink]="['/products', product.id]"
-    class="product"
-    *ngFor="let product of products"
-  >
-    <h2>{{product.name}}</h2>
-    <h3>{{product.price}}</h3>
-  </div>
+  <div class="cart-container">
+    <div class="cart-overall">
+      <div class="cart-products">
+        <h2>Cart&nbsp;</h2>
+        <h2>({{ cart.length }})</h2>
+      </div>
+      <app-btn-shopping></app-btn-shopping>
+    </div>
+    <div class="cart-details">
+      <div
+        [routerLink]="['/products', product.id]"
+        class="product"
+        *ngFor="let product of products"
+      >
+        <h3>{{ product.name }}</h3>
+        <h4>{{ product.price }}</h4>
+      </div>
+    </div>
   </div>
 </div>

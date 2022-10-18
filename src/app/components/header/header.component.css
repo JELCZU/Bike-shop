@@ -9,3 +9,13 @@ border-color: lightgray;
 align-items: center;
 
 }
+H1{
+  padding:0;
+  margin:0;
+  
+}
+a{
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+}

@@ -13,6 +13,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
+import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 
 @NgModule({
   declarations: [
@@ -34,6 +35,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
       { path: 'products/:productId', component: ProductDetailsComponent },
       { path: 'checkout', component: CheckoutComponent },
     ]),
+    FontAwesomeModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

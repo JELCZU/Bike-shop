@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-btn-shopping',
@@ -10,5 +10,9 @@ export class BtnShoppingComponent implements OnInit {
   @Input() backgroundColor: string = '';
   @Input() text: string = 'btn schopping';
   @Input() color: string = 'black';
+  @Output() btnClick = new EventEmitter();
   ngOnInit(): void {}
+  onClick() {
+    this.btnClick.emit();
+  }
 }

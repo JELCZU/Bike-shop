@@ -5,3 +5,10 @@ button{
   border-radius: 10px;
   white-space: nowrap;
 }
+H4{
+  padding: 0;
+  margin :0;
+}
+.cart-products{
+  display: flex;
+flex-direction: row;}
