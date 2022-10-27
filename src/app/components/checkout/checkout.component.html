@@ -5,16 +5,17 @@
         <h2>Cart&nbsp;</h2>
         <h2>({{ cart.length }})</h2>
       </div>
-      <app-btn-shopping></app-btn-shopping>
+      <h2>
+        <fa-icon
+          title="Empty cart"
+          (click)="emptyCart()"
+          [icon]="faTrash"
+        ></fa-icon>
+      </h2>
     </div>
     <div class="cart-details">
-      <div
-        [routerLink]="['/products', product.id]"
-        class="product"
-        *ngFor="let product of products"
-      >
-        <h3>{{ product.name }}</h3>
-        <h4>{{ product.price }}</h4>
+      <div *ngFor="let product of products">
+        <app-product-checkout [product]="product"></app-product-checkout>
       </div>
     </div>
   </div>

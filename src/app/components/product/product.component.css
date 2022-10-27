@@ -1,20 +1,19 @@
-
-img{
+img {
   color: black;
   max-width: 100%;
 }
-a{
+a {
   font-style: normal;
   color: transparent;
 }
 
-p{ 
-  padding:0;
-  margin:0;
+p {
+  padding: 0;
+  margin: 0;
   size: small;
   border-width: 0;
-  color:gray;
+  color: gray;
 }
-h3{
+h3 {
   color: black;
 }

@@ -1,14 +1,11 @@
-button{
-  padding:15px;
+button {
+  padding: 15px;
   font-size: medium;
   border-style: none;
   border-radius: 10px;
   white-space: nowrap;
 }
-H4{
+H4 {
   padding: 0;
-  margin :0;
+  margin: 0;
 }
-.cart-products{
-  display: flex;
-flex-direction: row;}

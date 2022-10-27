@@ -6,6 +6,7 @@ import { AppComponent } from './app.component';
 import { ProductsComponent } from './components/products/products.component';
 import { HeaderComponent } from './components/header/header.component';
 import { ProductComponent } from './components/product/product.component';
+
 import { MenuComponent } from './components/menu/menu.component';
 import { BtnShoppingComponent } from './components/btn-shopping/btn-shopping.component';
 import { ProductDetailsComponent } from './components/product-details/product-details.component';
@@ -14,6 +15,7 @@ import { RouterModule } from '@angular/router';
 import { FooterComponent } from './components/footer/footer.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
+import { ProductCheckoutComponent } from './components/product-checkout/product-checkout.component';
 
 @NgModule({
   declarations: [
@@ -21,11 +23,13 @@ import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
     ProductsComponent,
     HeaderComponent,
     ProductComponent,
+
     MenuComponent,
     BtnShoppingComponent,
     ProductDetailsComponent,
     FooterComponent,
     CheckoutComponent,
+    ProductCheckoutComponent,
   ],
   imports: [
     BrowserModule,
