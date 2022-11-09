@@ -16,6 +16,10 @@ import { FooterComponent } from './components/footer/footer.component';
 import { CheckoutComponent } from './components/checkout/checkout.component';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { ProductCheckoutComponent } from './components/product-checkout/product-checkout.component';
+import { BtnMenuComponent } from './components/btn-menu/btn-menu.component';
+import { CategoriesComponent } from './components/categories/categories.component';
+import { BikesComponent } from './components/bikes/bikes.component';
+import { PaginationComponent } from './components/pagination/pagination.component';
 
 @NgModule({
   declarations: [
@@ -30,14 +34,21 @@ import { ProductCheckoutComponent } from './components/product-checkout/product-
     FooterComponent,
     CheckoutComponent,
     ProductCheckoutComponent,
+    BtnMenuComponent,
+    CategoriesComponent,
+    BikesComponent,
+    PaginationComponent,
   ],
   imports: [
     BrowserModule,
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductsComponent },
-      { path: 'products/:productId', component: ProductDetailsComponent },
+      // { path: 'categories', component: CategoriesComponent },
+      // { path: '/categories/bikes', component: BikesComponent },
+      // { path: '/categories/:categor', component: BikesComponent },
       { path: 'checkout', component: CheckoutComponent },
+      { path: 'products/:productId', component: ProductDetailsComponent },
     ]),
     FontAwesomeModule,
   ],

@@ -1,4 +1,4 @@
-<div class="container">
+<div class="container" *ngIf="loadedProduct">
   <div class="box">
     <div>
       <img [src]="product.img" alt="bike" />
@@ -10,11 +10,16 @@
     <div class="add-to-cart-box">
       <h3>{{ product.price }}$</h3>
       <app-btn-shopping
-        backgroundColor="rgb(17, 158, 0)"
+        backgroundColor="{{ addToCartBtnColor }}"
         color="ghostwhite"
-        text="Add to cart"
+        text="{{ addToCartBtnText }}"
         (btnClick)="addToCart(product)"
+        [disableStatus]="+!product.onStock"
       ></app-btn-shopping>
+
+      <h4 class="on-stock-status" [ngStyle]="{ color: stockStatusColor }">
+        {{ stockStatusText }}
+      </h4>
     </div>
   </div>
 </div>

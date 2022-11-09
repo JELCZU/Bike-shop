@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { cart } from 'src/app/services/cart.service';
+import { cart, cartService } from 'src/app/services/cart.service';
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -7,8 +7,9 @@ import { cart } from 'src/app/services/cart.service';
 })
 export class HeaderComponent implements OnInit {
   cart = cart;
-  basket: any = 0;
-  constructor() {}
+  constructor(private cartService: cartService) {
+    cartService.updateCartFromLocalStorage();
+  }
 
   ngOnInit(): void {}
 }

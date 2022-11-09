@@ -1,6 +1,11 @@
 <!-- <button [ngStyle]="{'background-color':backgroundColor}" [ngStyle]="{'color':color}">{{text}}</button> -->
-<button [ngStyle]="{
-  'background-color':backgroundColor, 
-  'color':color
-}"
-(click)="onClick()"><h4>{{text}}</h4></button>
+<button
+  [ngStyle]="{
+    'background-color': backgroundColor,
+    color: color
+  }"
+  (click)="onClick()"
+  [disabled]="disableStatus"
+>
+  <h4>{{ text }}</h4>
+</button>

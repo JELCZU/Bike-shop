@@ -1,7 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { cartService } from 'src/app/services/cart.service';
-import { product, products } from '../../services/products.service';
+import { product, ProductsService } from '../../services/products.service';
 
 @Component({
   selector: 'app-product-details',
@@ -9,22 +9,46 @@ import { product, products } from '../../services/products.service';
   styleUrls: ['./product-details.component.css'],
 })
 export class ProductDetailsComponent implements OnInit {
-  products: product[] = products;
   product: product | any;
+  stockStatusColor: string = 'dimgray';
+  stockStatusText: string = 'unknown stock status';
+  addToCartBtnColor: string = 'grey';
+  addToCartBtnText: string = 'Product out of stock';
+  loadedProduct: boolean = false;
   constructor(
     private route: ActivatedRoute,
-    private cartService: cartService
+    private cartService: cartService,
+    private productsService: ProductsService
   ) {}
   addToCart(product: product) {
     this.cartService.addProductToCart(product);
   }
   ngOnInit() {
+    this.routerDataLoad()
+      .then(() => this.getStockStatus())
+      .then(() => (this.loadedProduct = true));
+  }
+  async routerDataLoad() {
     const routeParams = this.route.snapshot.paramMap;
     const productIdFromRoute = Number(routeParams.get('productId'));
-
-    // Find the product that correspond with the id provided in route.
-    this.product = this.products.find(
-      (product: { id: number }) => product.id === productIdFromRoute
-    );
+    this.product = await this.productsService.getProduct(productIdFromRoute);
+  }
+  getStockStatus() {
+    if (this.product.onStock > 0) {
+      this.addToCartBtnColor = 'rgb(17, 158, 0)';
+      this.addToCartBtnText = 'Add to cart';
+      if (this.product.onStock > 2) {
+        this.stockStatusColor = 'rgb(17, 158, 0)';
+        this.stockStatusText = 'On stock';
+      } else {
+        this.stockStatusColor = 'orange';
+        this.stockStatusText = 'Only few left';
+      }
+    } else {
+      this.addToCartBtnColor = 'grey';
+      this.addToCartBtnText = 'Product out of stock';
+      this.stockStatusColor = 'red';
+      this.stockStatusText = 'Out of stock';
+    }
   }
 }
