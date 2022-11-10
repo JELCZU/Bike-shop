@@ -44,6 +44,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     ReactiveFormsModule,
     RouterModule.forRoot([
       { path: '', component: ProductsComponent },
+      { path: 'page/:pageNumber', component: ProductsComponent },
       // { path: 'categories', component: CategoriesComponent },
       // { path: '/categories/bikes', component: BikesComponent },
       // { path: '/categories/:categor', component: BikesComponent },

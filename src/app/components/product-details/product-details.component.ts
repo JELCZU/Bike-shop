@@ -30,7 +30,9 @@ export class ProductDetailsComponent implements OnInit {
   }
   async routerDataLoad() {
     const routeParams = this.route.snapshot.paramMap;
+    console.log(routeParams);
     const productIdFromRoute = Number(routeParams.get('productId'));
+    console.log(productIdFromRoute);
     this.product = await this.productsService.getProduct(productIdFromRoute);
   }
   getStockStatus() {
