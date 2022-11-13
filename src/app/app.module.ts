@@ -20,6 +20,7 @@ import { BtnMenuComponent } from './components/btn-menu/btn-menu.component';
 import { CategoriesComponent } from './components/categories/categories.component';
 import { BikesComponent } from './components/bikes/bikes.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
+import { CartComponent } from './components/cart/cart.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +39,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
     CategoriesComponent,
     BikesComponent,
     PaginationComponent,
+    CartComponent,
   ],
   imports: [
     BrowserModule,
@@ -48,6 +50,7 @@ import { PaginationComponent } from './components/pagination/pagination.componen
       // { path: 'categories', component: CategoriesComponent },
       // { path: '/categories/bikes', component: BikesComponent },
       // { path: '/categories/:categor', component: BikesComponent },
+      { path: 'cart', component: CartComponent },
       { path: 'checkout', component: CheckoutComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
     ]),
