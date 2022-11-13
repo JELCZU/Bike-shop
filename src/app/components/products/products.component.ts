@@ -13,7 +13,10 @@ import { cartService } from 'src/app/services/cart.service';
 })
 export class ProductsComponent implements OnInit {
   products: product[] = products;
+  defaultProductsPerPage: number = 30;
   productsPerPage: number = 30;
+  displayedProducts: number = 30;
+  allProducts: number = 67;
   pageNumber: number = 1;
   constructor(
     private route: ActivatedRoute,
@@ -26,7 +29,12 @@ export class ProductsComponent implements OnInit {
     this.readProucts();
   }
   async readProucts() {
-    for (let i = 1; i <= this.productsPerPage; i++) {
+    this.productsService.emptyProducts();
+    if (this.pageNumber * this.productsPerPage > this.allProducts) {
+      this.displayedProducts =
+        this.allProducts - (this.pageNumber - 1) * this.productsPerPage;
+    }
+    for (let i = 1; i <= this.displayedProducts; i++) {
       products.push(
         await this.productsService.getProduct(
           i + (this.pageNumber - 1) * this.productsPerPage
@@ -34,11 +42,13 @@ export class ProductsComponent implements OnInit {
       );
     }
   }
+
   routerDataLoad() {
     const routeParams = this.route.snapshot.paramMap;
-    console.log(routeParams);
     this.pageNumber = Number(routeParams.get('pageNumber'));
     const pageNumber = Number(routeParams.get('pageNumber'));
-    console.log(pageNumber);
+    if (this.pageNumber === 0) {
+      this.pageNumber = 1;
+    }
   }
 }

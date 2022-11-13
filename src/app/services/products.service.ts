@@ -21,6 +21,9 @@ export class ProductsService {
     const res = await fetch(`http://localhost:5000/products/${productId}`);
     return res.json();
   }
+  emptyProducts() {
+    products.splice(0, products.length);
+  }
   ngOnInit() {}
   async loadProducts() {
     products.push(...(await this.getProducts()));

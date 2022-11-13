@@ -1,4 +1,4 @@
-.box{
+.box {
   display: flex;
   flex-direction: row;
   margin-top: 10px;
@@ -9,22 +9,19 @@
   border-color: gray;
   margin-bottom: 10px;
 }
-.product{
+.product {
   border-radius: 15px;
   border-style: none;
-  border-color: gray;  
-  padding:10px;
+  border-color: gray;
+  padding: 10px;
   background-color: white;
   min-width: 30%;
+  max-width: 30%;
   flex: 1;
 }
-.product:hover{
+.product:hover {
   border-style: solid;
   border-width: 1px;
-  padding:9px;
+  padding: 9px;
   cursor: pointer;
 }
-
-
-
-
