@@ -1,5 +1,5 @@
 <div class="container">
-  <div class="cart-container">
+  <div *ngIf="cart.length" class="cart-container">
     <div class="cart-content">
       <div class="cart-overall">
         <div class="cart-products">
@@ -20,11 +20,24 @@
         </div>
       </div>
     </div>
-
     <div class="checkout-cart">
-      <div class="promo-code-container"></div>
+      <div class="promo-code-container">
+        <h3>Promo code</h3>
+        <div>
+          <input type="text" placeholder="Enter code here" />
+          <app-btn-shopping
+            backgroundColor="rgb(17, 158, 0)"
+            color="ghostwhite"
+            text="Apply code"
+          ></app-btn-shopping>
+        </div>
+      </div>
       <div class="order-container">
-        <span>Summary cost</span>
+        <div>
+          <h3>Summary price:</h3>
+          <h3>{{ sumProductsPrice() }}$</h3>
+        </div>
+
         <app-btn-shopping
           backgroundColor="rgb(17, 158, 0)"
           color="ghostwhite"
@@ -32,5 +45,15 @@
         ></app-btn-shopping>
       </div>
     </div>
+  </div>
+  <div *ngIf="!cart.length" class="empty-cart-container">
+    <H3>Your cart is empty</H3>
+    <a href=""
+      ><app-btn-shopping
+        backgroundColor="rgb(17, 158, 0)"
+        color="ghostwhite"
+        text="Go to home page"
+      ></app-btn-shopping
+    ></a>
   </div>
 </div>

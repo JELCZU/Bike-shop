@@ -10,6 +10,9 @@ import { faTrash } from '@fortawesome/free-solid-svg-icons';
 export class CartComponent implements OnInit {
   products: any;
   cart: product[] = cart;
+  arraa: number[] = [0, 2, 4];
+  summaryProductsPrice: number = 0;
+  test: number = 0;
   faTrash = faTrash;
   emptyCart() {
     this.cartService.emptyCart();
@@ -18,5 +21,14 @@ export class CartComponent implements OnInit {
 
   ngOnInit(): void {
     this.products = cart;
+    this.cartService
+      .updateCartFromLocalStorage()
+      .then(() => this.sumProductsPrice());
+  }
+  sumProductsPrice() {
+    return (this.summaryProductsPrice = cart.reduce(
+      (previousValue, currentValue) => previousValue + currentValue.price,
+      0
+    ));
   }
 }

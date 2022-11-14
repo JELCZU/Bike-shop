@@ -46,5 +46,6 @@ export class cartService {
         cart.push(await this.productsService.getProduct(index + 1));
       }
     }
+    console.log(cart);
   }
 }
