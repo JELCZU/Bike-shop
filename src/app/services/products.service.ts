@@ -26,6 +26,7 @@ export class ProductsService {
   }
   ngOnInit() {}
   async loadProducts() {
+    //Check if ... is needed
     products.push(...(await this.getProducts()));
   }
 }

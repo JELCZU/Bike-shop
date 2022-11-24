@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { ProductCheckoutComponent } from './product-checkout.component';
 
 describe('ProductCheckoutComponent', () => {
@@ -8,9 +7,8 @@ describe('ProductCheckoutComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ ProductCheckoutComponent ]
-    })
-    .compileComponents();
+      declarations: [ProductCheckoutComponent],
+    }).compileComponents();
 
     fixture = TestBed.createComponent(ProductCheckoutComponent);
     component = fixture.componentInstance;

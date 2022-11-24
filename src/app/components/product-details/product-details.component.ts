@@ -14,7 +14,6 @@ export class ProductDetailsComponent implements OnInit {
   stockStatusText: string = 'unknown stock status';
   addToCartBtnColor: string = 'grey';
   addToCartBtnText: string = 'Product out of stock';
-  loadedProduct: boolean = false;
   constructor(
     private route: ActivatedRoute,
     private cartService: cartService,
@@ -24,9 +23,7 @@ export class ProductDetailsComponent implements OnInit {
     this.cartService.addProductToCart(product);
   }
   ngOnInit() {
-    this.routerDataLoad()
-      .then(() => this.getStockStatus())
-      .then(() => (this.loadedProduct = true));
+    this.routerDataLoad().then(() => this.getStockStatus());
   }
   async routerDataLoad() {
     const routeParams = this.route.snapshot.paramMap;
