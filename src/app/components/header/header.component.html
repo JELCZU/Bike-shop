@@ -1,17 +1,26 @@
-<div class="containerOuter"></div>
 <div class="container">
   <H1
-    ><a href=""
+    ><a [routerLink]="['']"
       ><img
         src="../../../assets/img/logo-header.png"
         width="250px"
         alt="bike shop logo" /></a
   ></H1>
-  <a href="/cart"
-    ><app-btn-shopping
-      backgroundColor="#00599e"
-      color="ghostwhite"
-      text="Cart ({{ cart.length }})"
-    ></app-btn-shopping
-  ></a>
+  <div class="header-nav">
+    <a href="/account-login" class="account-login">
+      <fa-icon [icon]="faHeadset"></fa-icon>
+      <p>Contact</p></a
+    >
+    <a href="/account-login" class="account-login">
+      <fa-icon [icon]="faUser"></fa-icon>
+      <p>Login</p></a
+    >
+    <a [routerLink]="['/cart']"
+      ><app-btn-shopping
+        backgroundColor="#00599e"
+        color="ghostwhite"
+        text="Cart ({{ cart.length }})"
+      ></app-btn-shopping
+    ></a>
+  </div>
 </div>

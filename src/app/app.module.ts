@@ -21,6 +21,9 @@ import { CategoriesComponent } from './components/categories/categories.componen
 import { BikesComponent } from './components/bikes/bikes.component';
 import { PaginationComponent } from './components/pagination/pagination.component';
 import { CartComponent } from './components/cart/cart.component';
+import { AccountLoginComponent } from './components/account-login/account-login.component';
+import { BtnHeaderComponent } from './components/btn-header/btn-header.component';
+import { ContactComponent } from './components/contact/contact.component';
 
 @NgModule({
   declarations: [
@@ -40,6 +43,9 @@ import { CartComponent } from './components/cart/cart.component';
     BikesComponent,
     PaginationComponent,
     CartComponent,
+    AccountLoginComponent,
+    BtnHeaderComponent,
+    ContactComponent,
   ],
   imports: [
     BrowserModule,
@@ -50,6 +56,7 @@ import { CartComponent } from './components/cart/cart.component';
       // { path: 'categories', component: CategoriesComponent },
       // { path: '/categories/bikes', component: BikesComponent },
       // { path: '/categories/:categor', component: BikesComponent },
+      { path: 'account-login', component: AccountLoginComponent },
       { path: 'cart', component: CartComponent },
       { path: 'checkout', component: CheckoutComponent },
       { path: 'products/:productId', component: ProductDetailsComponent },
