@@ -37,7 +37,7 @@
           <h3>Summary price:</h3>
           <h3>{{ sumProductsPrice() }}$</h3>
         </div>
-        <a href="/checkout">
+        <a [routerLink]="['/checkout']">
           <app-btn-shopping
             backgroundColor="rgb(17, 158, 0)"
             color="ghostwhite"

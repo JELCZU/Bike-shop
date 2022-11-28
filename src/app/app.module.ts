@@ -24,6 +24,8 @@ import { CartComponent } from './components/cart/cart.component';
 import { AccountLoginComponent } from './components/account-login/account-login.component';
 import { BtnHeaderComponent } from './components/btn-header/btn-header.component';
 import { ContactComponent } from './components/contact/contact.component';
+import { ShipmentComponent } from './components/shipment/shipment.component';
+import { TermsOfUseComponent } from './components/terms-of-use/terms-of-use.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +48,8 @@ import { ContactComponent } from './components/contact/contact.component';
     AccountLoginComponent,
     BtnHeaderComponent,
     ContactComponent,
+    ShipmentComponent,
+    TermsOfUseComponent,
   ],
   imports: [
     BrowserModule,
@@ -53,6 +57,9 @@ import { ContactComponent } from './components/contact/contact.component';
     RouterModule.forRoot([
       { path: '', component: ProductsComponent },
       { path: 'page/:pageNumber', component: ProductsComponent },
+      { path: 'contact', component: ContactComponent },
+      { path: 'schipment', component: ShipmentComponent },
+      { path: 'terms-of-use', component: TermsOfUseComponent },
       // { path: 'categories', component: CategoriesComponent },
       // { path: '/categories/bikes', component: BikesComponent },
       // { path: '/categories/:categor', component: BikesComponent },
