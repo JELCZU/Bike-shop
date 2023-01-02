@@ -1,27 +1,38 @@
-# BikeShop
+# Portfolio
+![The app](https://github.com/JELCZU/Bike-shop/blob/master/img/The%20app.PNG) 
+This app is frontend of bike shop. This app is developed using Angular framework.
+## Table of contents
+* [Instalation](#Instalation)
+* [About app](#About-app)
+* [Technologies](#Technologies)
+* [Sources](#Sources)
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 14.2.5.
+---
+## Instalation
+To run project
 
-## Development server
+git clone https://github.com/JELCZU/Bike-shop.git
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+or download repository by clicking "Open with GitHub Desktop" or "Download ZIP"
+![How to download](https://github.com/JELCZU/portfolio/blob/master/img/How%20to%20download.PNG) 
+After download repository you can run project by type:
+"ng serve"
+## About app
+The portfolio is developed using  Angular framework.
+![The app how to](https://github.com/JELCZU/Bike-shop/blob/master/img/The%20app%20how%20to.PNG) 
+The app contain sections with diferent functions:
+1. Header section- on the left side there is logo by clicking it you always come back to main page. On the right side there are contact area, login to your acount area and your cart area.
+2. Categories section- there you can select category that you are interested in.
+3. Section where you can watch products.
 
-## Code scaffolding
+## Technologies
+HTML
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+CSS
 
-## Build
+JavaScript
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
-
-## Running unit tests
-
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
-
-## Running end-to-end tests
-
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
-
-## Further help
-
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Angular
+## Sources
+### Symbols
+https://fontawesome.com/

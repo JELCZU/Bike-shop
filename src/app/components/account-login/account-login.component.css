@@ -64,3 +64,8 @@ H3 {
   margin: 30px;
   font-weight: 100;
 }
+@media (max-width: 320px) {
+  H3 {
+    background-color: red;
+  }
+}
