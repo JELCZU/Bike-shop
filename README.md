@@ -1,5 +1,6 @@
 # Portfolio
-![The app](https://github.com/JELCZU/Bike-shop/blob/master/img/The%20app.PNG) 
+![The app](https://github.com/JELCZU/Bike-shop/blob/master/img/The%20app.PNG)
+
 This app is frontend of bike shop. This app is developed using Angular framework.
 ## Table of contents
 * [Instalation](#Instalation)
@@ -19,6 +20,7 @@ After download repository you can run project by type:
 "ng serve"
 ## About app
 The portfolio is developed using  Angular framework.
+
 ![The app how to](https://github.com/JELCZU/Bike-shop/blob/master/img/The%20app%20how%20to.PNG) 
 The app contain sections with diferent functions:
 1. Header section- on the left side there is logo by clicking it you always come back to main page. On the right side there are contact area, login to your acount area and your cart area.
