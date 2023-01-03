@@ -1,7 +1,7 @@
 # Bike shop
 ![The app](https://github.com/JELCZU/Bike-shop/blob/master/img/The%20app.PNG)
 
-This app is frontend of bike shop and is developed using Angular framework. This bike shop let you scroll through various products and add them to your basket.
+This app is frontend of bike shop and is developed using Angular framework. This bike shop let you scroll through various products and add them to your cart.
 ## Table of contents
 * [Instalation](#Instalation)
 * [About app](#About-app)
